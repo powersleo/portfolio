@@ -1,0 +1,125 @@
+body, html, #root, .App {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Simple grid layout */
+.App {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  gap: 20px;
+}
+
+header {
+  background-color: #004d99;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+section {
+  padding: 20px 5%;
+}
+
+section h2 {
+  color: #333;
+  margin-top: 0;
+}
+
+/* Styling for About section */
+.about {
+  background-color: #f4f4f4;
+  border-left: 4px solid #004d99;
+  padding: 20px;
+  margin: 20px 0;
+  display: grid;
+
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Skills list */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.skill {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Contact section */
+.contact {
+  background-color: #004d99;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+nav {
+  background: #004d99;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  text-decoration: underline;
+}
